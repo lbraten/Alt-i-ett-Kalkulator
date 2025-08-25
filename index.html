@@ -2,70 +2,138 @@
 <html lang="no">
 <head>
     <meta charset="UTF-8">
-    <title>Alt-i-ett Kalkulator</title>
+    <title>AltKalkis</title>
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
 </head>
 <body>
-<h1>Alt-i-ett Kalkulator</h1>
+    <h1>AltKalkis <br>Tid & Tall</h1>
 
-<!-- Dagens dato og klokkeslett -->
-<div>
-    <h2>Dagens dato og klokkeslett</h2>
-    <p id="currentDateTime"></p>
-</div>
+    <main>
+        <!-- Dagens dato og klokkeslett -->
+        <div>
+            <h2>Dagens dato og klokkeslett</h2>
+            <p id="currentDateTime"></p>
+        </div>
 
-<!-- Prosentkalkulator -->
-<div>
-    <h2>Prosentkalkulator</h2>
-    <input id="percentValue" type="number" placeholder="Tall">
-    <input id="percentPercent" type="number" placeholder="%">
-    <button id="percentButton">Regn ut</button>
-    <p id="percentResult"></p>
-</div>
+        <!-- Prosentkalkulator -->
+        <div>
+            <h2>Prosentkalkulator</h2>
+            <input id="percentValue" type="number" placeholder="Tall">
+            <input id="percentPercent" type="number" placeholder="%">
+            <button id="percentButton">Regn ut</button>
+            <p id="percentResult"></p>
+        </div>
 
-<!-- Timeslønn kalkulator -->
-<div>
-    <h2>Timeslønn / månedslønn</h2>
-    <input id="monthlySalary" type="number" placeholder="Månedslønn">
-    <input id="hoursPerWeek" type="number" placeholder="Timer per uke">
-    <button id="hourlyButton">Regn ut timeslønn</button>
-    <p id="hourlyResult"></p>
-</div>
+        <!-- Timeslønn kalkulator -->
+        <div>
+            <h2>Timeslønn / månedslønn</h2>
+            <input id="monthlySalary" type="number" placeholder="Månedslønn">
+            <input id="hoursPerWeek" type="number" placeholder="Timer per uke">
+            <button id="hourlyButton">Regn ut timeslønn</button>
+            <p id="hourlyResult"></p>
+        </div>
 
-<!-- Alderskalkulator -->
-<div>
-    <h2>Alder</h2>
-    <input id="birthDate" type="date">
-    <button id="ageButton">Regn ut alder</button>
-    <p id="ageResult"></p>
-</div>
+        <!-- Alderskalkulator -->
+        <div>
+            <h2>Alder</h2>
+            <input id="birthDate" type="date">
+            <button id="ageButton">Regn ut alder</button>
+            <p id="ageResult"></p>
+        </div>
 
-<!-- Differanse mellom datoer -->
-<div>
-    <h2>Differanse mellom datoer</h2>
-    <input id="date1" type="date">
-    <input id="date2" type="date">
-    <button id="dateDiffButton">Regn ut</button>
-    <p id="dateDiffResult"></p>
-</div>
+            <!-- Differanse mellom datoer -->
+            <div>
+                <h2>Differanse mellom datoer</h2>
+                <input id="date1" type="date">
+                <input id="date2" type="date">
+                <button id="dateDiffButton">Regn ut</button>
+                <p id="dateDiffResult"></p>
+            </div>
 
-<!-- Tidssoner -->
-<div>
-    <h2>Tidssoner</h2>
-    <input id="timezone" type="text" placeholder="Eks: Europe/Oslo">
-    <button id="timezoneButton">Vis tid</button>
-    <p id="timezoneResult"></p>
-</div>
+    <div>
+        <h2>Tidssoner</h2>
+        <select id="timezoneSelect">
+            <option value="Europe/London">GMT / London</option>
+            <option value="Atlantic/Reykjavik">GMT / Reykjavik</option>
+            <option value="Europe/Berlin">CET / Berlin</option>
+            <option value="Europe/Oslo">CET / Oslo</option>
+            <option value="Europe/Moscow">MSK / Moscow</option>
 
-<!-- Random tidskonvertering -->
-<div>
-    <h2>Minutter → Timer/Dager</h2>
-    <input id="minutesInput" type="number" placeholder="Antall minutter">
-    <button id="minutesButton">Konverter</button>
-    <p id="minutesResult"></p>
-</div>
+            <option value="America/New_York">EST / New York</option>
+            <option value="America/Chicago">CST / Chicago</option>
+            <option value="America/Denver">MST / Denver</option>
+            <option value="America/Los_Angeles">PST / Los Angeles</option>
+            <option value="America/Sao_Paulo">BRT / São Paulo</option>
 
-<script src="script.js"></script>
+            <option value="Africa/Cairo">EET / Cairo</option>
+            <option value="Africa/Johannesburg">SAST / Johannesburg</option>
+            <option value="Africa/Lagos">WAT / Lagos</option>
+
+            <option value="Asia/Dubai">GST / Dubai</option>
+            <option value="Asia/Kolkata">IST / New Delhi</option>
+            <option value="Asia/Singapore">SGT / Singapore</option>
+            <option value="Asia/Tokyo">JST / Tokyo</option>
+            <option value="Asia/Shanghai">CST / Shanghai</option>
+            <option value="Asia/Seoul">KST / Seoul</option>
+            <option value="Asia/Hong_Kong">HKT / Hong Kong</option>
+
+            <option value="Australia/Perth">AWST / Perth</option>
+            <option value="Australia/Sydney">AEST / Sydney</option>
+            <option value="Pacific/Auckland">NZST / Auckland</option>
+
+        </select>
+        <button id="timezoneButton">Vis tid</button>
+        <p id="timezoneResult"></p>
+    </div>
+
+    <!-- Tradisjonell kalkulator -->
+    <div>
+            <h2>Kalkulator</h2>
+            <input type="text" id="calcDisplay" disabled>
+            <div class="calc-buttons">
+                <button class="calc-btn">7</button>
+                    <button class="calc-btn">8</button>
+                    <button class="calc-btn">9</button>
+                    <button class="calc-btn operator">/</button>
+
+                    <button class="calc-btn">4</button>
+                    <button class="calc-btn">5</button>
+                    <button class="calc-btn">6</button>
+                    <button class="calc-btn operator">*</button>
+
+                    <button class="calc-btn">1</button>
+                    <button class="calc-btn">2</button>
+                    <button class="calc-btn">3</button>
+                    <button class="calc-btn operator">-</button>
+
+                    <button class="calc-btn">0</button>
+                    <button class="calc-btn">.</button>
+                    <button class="calc-btn" id="clear">C</button>
+                    <button class="calc-btn operator">+</button>
+
+                    <button class="calc-btn equal" id="equals">=</button>
+                </div>
+            </div>
+        <div class="container">
+            <h2>Valutakalkulator</h1>
+            <div class="converter">
+                <input type="number" id="amount" placeholder="Beløp i NOK">
+                
+                <select id="currency">
+                    <option value="EUR">Euro (EUR)</option>
+                    <option value="USD">US Dollar (USD)</option>
+                    <option value="GBP">Britiske Pund (GBP)</option>
+                    <option value="SEK">Svenske kroner (SEK)</option>
+                </select>
+
+                <button id="convertBtn">Konverter</button>
+            </div>
+
+            <div id="result"></div>
+        </div>
+    </main>
+    
+    <script src="script.js"></script>
 </body>
 </html>

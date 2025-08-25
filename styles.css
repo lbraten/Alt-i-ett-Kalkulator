@@ -1,8 +1,5 @@
 body {
     font-family: 'Inter', sans-serif;
-}
-
-body {
     background-color: #f5f5f5;
     color: #333;
     display: flex;
@@ -10,19 +7,23 @@ body {
     padding: 2rem;
 }
 
+/* GRID layout for kortene */
 main {
-    max-width: 800px;
+    max-width: 1200px; /* større så du får plass til 4 */
     width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1rem;
 }
 
 div {
     background-color: #fff;
     padding: 1.5rem;
-    margin-bottom: 1rem;
     border-radius: 12px;
     box-shadow: 0 4px 12px rgba(0,0,0,0.05);
 }
 
+/* Knappestil */
 button {
     background: #4f46e5;
     color: white;
@@ -37,16 +38,18 @@ button:hover {
     background: #6366f1;
 }
 
+/* Inputfelter */
 input[type="number"],
 input[type="date"],
 input[type="text"] {
     padding: 0.5rem 0.8rem;
-    margin-right: 0.5rem;
+    margin: 0.5rem; /* legger litt space på alle sider */
     border: 1px solid #ccc;
     border-radius: 8px;
     font-size: 1rem;
     width: 150px;
 }
+
 
 input:focus {
     border-color: #4f46e5;
@@ -54,10 +57,13 @@ input:focus {
     box-shadow: 0 0 0 2px rgba(79, 70, 229, 0.2);
 }
 
+/* Overskrifter */
 h1 {
     text-align: center;
     font-weight: 600;
     margin-bottom: 2rem;
+    margin-right: 40px;
+    grid-column: 1 / -1; /* gjør at h1 alltid strekker seg over hele bredden */
 }
 
 h2 {
@@ -65,15 +71,81 @@ h2 {
     margin-bottom: 1rem;
 }
 
+/* Responsivt */
 @media (max-width: 600px) {
     input[type="number"],
     input[type="date"],
     input[type="text"] {
-    width: 100%;
-    margin-bottom: 0.5rem;
+        width: 100%;
+        margin-bottom: 0.5rem;
     }
 
     div {
-    padding: 1rem;
+        padding: 1rem;
     }
+}
+
+/* Kalkulator-stil */
+#calcDisplay {
+    width: 90%;
+    height: 40px;
+    margin-bottom: 20px;
+    text-align: right;
+    font-size: 1.2rem;
+    padding: 5px;
+    border: none;
+    border-radius: 6px;
+    background: #2b2b2b;
+}
+
+.calc-buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 8px;
+    background: #eeeeee;
+}
+
+.calc-btn {
+    padding: 15px;
+    font-size: 1.1rem;
+    border: none;
+    border-radius: 8px;
+    background: #7a7a7a;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.calc-btn:hover {
+    background: #bbb;
+}
+
+.operator {
+    background: #4f46e5;
+}
+
+.operator:hover {
+    background: #6366f1;
+}
+
+.equal {
+    grid-column: span 4;
+    background: #4CAF50;
+    color: white;
+    font-weight: bold;
+}
+
+.equal:hover {
+    background: #45a049;
+}
+
+.converter {
+    display: grid;
+    gap: 10px;
+    margin-bottom: 1rem;
+}
+
+#result {
+    font-size: 1.2rem;
+    margin-top: 1rem;
+
 }
