@@ -7,6 +7,11 @@ document.addEventListener("DOMContentLoaded", () => {
         const el = document.getElementById('currentDateTime');
         if (el) el.innerText = now.toLocaleString();
     }
+
+    // kjør med en gang
+    updateDateTime();
+
+    // så oppdater hvert sekund
     setInterval(updateDateTime, 1000);
 
   // 📊 Prosentkalkulator
