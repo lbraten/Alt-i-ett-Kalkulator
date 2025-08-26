@@ -160,7 +160,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
             try {
                 console.log("🔄 Henter data fra API...");
-                const res = await fetch(`https://api.exchangerate.host/latest?base=NOK&symbols=${currency}`);
+                const res = await fetch(`https://api.frankfurter.app/latest?from=NOK&to=${currency}`);
                 const data = await res.json();
                 console.log("✅ API-respons:", data);
 
@@ -172,8 +172,25 @@ document.addEventListener("DOMContentLoaded", () => {
                     `${amount} NOK = ${converted} ${currency}`;
             } catch (error) {
                 console.error("❌ API-feil:", error);
-                document.getElementById("result").innerText = "Kunne ikke hente valutakurs 😅";
+                document.getElementById("result").innerText = "Kunne ikke hente valutakurs";
             }
             });
         }
+
+    async function getDailyQuote() {
+        try {
+            let res = await fetch("https://zenquotes.io/api/today");
+            let data = await res.json();
+
+            let quote = data[0].q;
+            let author = data[0].a;
+            document.getElementById("quoteResult").innerText = `"${quote}" — ${author}`;
+        } catch (err) {
+            document.getElementById("quoteResult").innerText = "Klarte ikke hente dagens quote 😅";
+        }
+    }
+
+    // henter dagens quote med en gang siden lastes
+    getDailyQuote();
+
     });
