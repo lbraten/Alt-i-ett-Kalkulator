@@ -193,4 +193,32 @@ document.addEventListener("DOMContentLoaded", () => {
     // henter dagens quote med en gang siden lastes
     getDailyQuote();
 
+    const idag = new Date();
+    const day = String(idag.getDate()).padStart(2, '0');
+
+    // Map månedstall til norsk månedsnavn
+    const maneder = [
+        "januar", "februar", "mars", "april", "mai", "juni",
+        "juli", "august", "september", "oktober", "november", "desember"
+    ];
+    const monthNavn = maneder[idag.getMonth()]; // getMonth() er 0-basert
+
+    // Lag filnavnet basert på månedsnavn
+    const filNavn = `json-filer/${monthNavn}.json`;
+
+    fetch(filNavn)
+        .then(response => {
+            if (!response.ok) throw new Error('Kunne ikke laste JSON-filen');
+            return response.json();
+        })
+        .then(data => {
+            const key = `${String(idag.getMonth() + 1).padStart(2,'0')}-${day}`; // "MM-DD"
+            const dagensHendelse = data[key] || "Ingen historisk hendelse registrert for i dag.";
+            document.getElementById("dagens").textContent = dagensHendelse;
+        })
+        .catch(error => {
+            console.error(error);
+            document.getElementById("dagens").textContent = "Kunne ikke laste dagens hendelse.";
+        });
+
     });
