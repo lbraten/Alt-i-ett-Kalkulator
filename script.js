@@ -221,4 +221,94 @@ document.addEventListener("DOMContentLoaded", () => {
             document.getElementById("dagens").textContent = "Kunne ikke laste dagens hendelse.";
         });
 
+    const timerDisplay = document.getElementById("timeren");
+    const countdownDisplay = document.getElementById("nedtelling");
+    const minInput = document.getElementById("minInput");
+    const sekInput = document.getElementById("sekInput");
+    const startBtn = document.getElementById("startBtn");
+    const stoppBtn = document.getElementById("stoppBtn");
+    const resetBtn = document.getElementById("resetBtn");
+
+    // TIMER
+    let timerSekunder = 0;
+    setInterval(() => {
+        timerSekunder++;
+        timerDisplay.textContent = formatTid(timerSekunder);
+    }, 1000);
+
+    // NEDTELLING
+    let countdownSekunder = 600;
+    let nedtellingInterval = null;
+
+    function startNedtelling() {
+        const min = parseInt(minInput.value) || 10;
+        const sek = parseInt(sekInput.value) || 0;
+        countdownSekunder = min * 60 + sek;
+
+        if (nedtellingInterval) clearInterval(nedtellingInterval);
+        oppdaterCountdown();
+
+        nedtellingInterval = setInterval(() => {
+            countdownSekunder--;
+            if (countdownSekunder <= 0) {
+                clearInterval(nedtellingInterval);
+                countdownSekunder = 0;
+                alert("Tid er ute! 🚨");
+            }
+            oppdaterCountdown();
+        }, 1000);
+    }
+
+    function stoppNedtelling() {
+        clearInterval(nedtellingInterval);
+        nedtellingInterval = null;
+    }
+
+    function resetNedtelling() {
+        stoppNedtelling();
+        countdownSekunder = 600;
+        oppdaterCountdown();
+    }
+
+    function oppdaterCountdown() {
+        countdownDisplay.textContent = formatTid(countdownSekunder);
+    }
+
+    function formatTid(totalSekunder) {
+        const timer = String(Math.floor(totalSekunder / 3600)).padStart(2, "0");
+        const min = String(Math.floor((totalSekunder % 3600) / 60)).padStart(2, "0");
+        const sek = String(totalSekunder % 60).padStart(2, "0");
+        return `${timer}:${min}:${sek}`;
+    }
+
+    // Event listeners
+    startBtn.addEventListener("click", startNedtelling);
+    stoppBtn.addEventListener("click", stoppNedtelling);
+    resetBtn.addEventListener("click", resetNedtelling);
+
+    oppdaterCountdown();
+        
+
+    async function getWeather() {
+    try {
+        const res = await fetch(
+        "https://api.allorigins.win/get?url=" +
+            encodeURIComponent("https://api.met.no/weatherapi/locationforecast/2.0/compact?lat=59.91&lon=10.75"),
+        { headers: { "User-Agent": "MinEnkleNettside/1.0" } }
+        );
+
+        const wrappedData = await res.json();
+        const data = JSON.parse(wrappedData.contents);
+        const temp = data.properties.timeseries[0].data.instant.details.air_temperature;
+
+        document.querySelector(".temp").textContent = temp + " °C";
+    } catch (err) {
+        document.querySelector(".temp").textContent = "Klarte ikke hente værdata 😢";
+        console.error(err);
+    }
+    }
+
+    getWeather();
+
+
     });
