@@ -1,0 +1,57 @@
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+    <meta charset="UTF-8">
+    <title>Text ⇄ Hex Converter</title>
+    <style>
+        body { font-family: monospace; max-width: 600px; margin: 40px auto; text-align: center; }
+        textarea { width: 100%; height: 100px; margin: 10px 0; padding: 10px; font-size: 14px; }
+        button { margin: 5px; padding: 8px 15px; cursor: pointer; }
+    </style>
+    </head>
+    <body>
+    <h2>🔄 Text ⇄ Hex Converter</h2>
+    
+    <h3>Text → Hex</h3>
+    <textarea id="textInput" placeholder="Type text here..."></textarea>
+    <button onclick="toHex()">Convert to Hex</button>
+    <button onclick="copyText('hexOutput')">Copy Hex</button>
+    <textarea id="hexOutput" readonly placeholder="Hex output will appear here..."></textarea>
+
+    <h3>Hex → Text</h3>
+    <textarea id="hexInput" placeholder="Type hex here (e.g., 48 65 6C 6C 6F)..."></textarea>
+    <button onclick="toText()">Convert to Text</button>
+    <button onclick="copyText('textOutput')">Copy Text</button>
+    <textarea id="textOutput" readonly placeholder="Text output will appear here..."></textarea>
+
+    <script>
+        function toHex() {
+        const text = document.getElementById("textInput").value;
+        let hex = '';
+        for (let i = 0; i < text.length; i++) {
+            hex += text.charCodeAt(i).toString(16).padStart(2, '0').toUpperCase() + ' ';
+        }
+        document.getElementById("hexOutput").value = hex.trim();
+        }
+
+        function toText() {
+        const hex = document.getElementById("hexInput").value.trim().split(/\s+/);
+        let text = '';
+        try {
+            for (let h of hex) {
+            text += String.fromCharCode(parseInt(h, 16));
+            }
+        } catch {
+            text = "⚠️ Invalid hex input!";
+        }
+        document.getElementById("textOutput").value = text;
+        }
+
+        function copyText(id) {
+        const el = document.getElementById(id);
+        el.select();
+        document.execCommand("copy");
+        }
+    </script>
+    </body>
+    </html>
