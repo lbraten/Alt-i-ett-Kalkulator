@@ -148,9 +148,37 @@
         </div>
 
         <div>
-            <h2>Dagens quote</h2>
+            <h2>Dagens historiske</h2>
             <p id="dagens">Laster...</p>
         </div>
+
+        <div class="wrap" id="klokke">
+            <h1>enkel klokke‑widget</h1>
+
+
+            <div class="label">timer</div>
+            <div id="timeren" class="display">00:00:00</div>
+
+
+            <div class="label">nedtelling</div>
+            <div id="nedtelling" class="display">00:10:00</div>
+
+
+            <div class="row">
+                <input id="minInput" type="number" min="0" step="1" placeholder="Minutter" />
+                <input id="sekInput" type="number" min="0" max="59" step="1" placeholder="Sekunder" />
+                <button id="startBtn" type="button">Start nedtelling</button>
+                <button id="stoppBtn" type="button">Stopp</button>
+                <button id="resetBtn" type="button">Reset</button>
+            </div>
+            <div class="muted">Hint: La feltene stå tomme for å starte en rask 10‑minutters nedtelling.</div>
+        </div>
+
+    <div id="weather">
+        <h2>Været i Oslo</h2>
+        <p class="temp">Henter...</p>
+    </div>
+
     </main>
     
     <script src="script.js"></script>
