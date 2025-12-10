@@ -261,37 +261,24 @@ document.addEventListener("DOMContentLoaded", () => {
     resetBtn.addEventListener("click", resetNedtelling);
     oppdaterCountdown();
 
-    // 🌦️ Vær: prøv data fra data/weather.json, ellers fallback til direkte MET.no
+    // 🌦️ Vær: les kun fra data/weather.json
     async function getWeather() {
         const tempEl = document.querySelector(".temp");
         try {
-            // 1) Prøv same-origin JSON fra Actions
             const res = await fetch("data/weather.json", { cache: "no-cache" });
-            if (!res.ok) throw new Error("weather.json mangler");
+            if (!res.ok) throw new Error("Kunne ikke laste weather.json");
             const data = await res.json();
             const temp = data?.properties?.timeseries?.[0]?.data?.instant?.details?.air_temperature;
             if (typeof temp === "number") {
                 tempEl.textContent = `${temp} °C`;
-                return;
+            } else {
+                throw new Error("Ugyldig værformat");
             }
-            throw new Error("Ugyldig værformat");
         } catch (err) {
-            console.warn("Fallback til direkte MET.no:", err);
-            try {
-                // 2) Direkte MET.no-kall (kan returnere 403 uten brukeragent)
-                const res2 = await fetch("https://api.met.no/weatherapi/locationforecast/2.0/compact?lat=59.91&lon=10.75");
-                const data2 = await res2.json();
-                const temp2 = data2?.properties?.timeseries?.[0]?.data?.instant?.details?.air_temperature;
-                if (typeof temp2 === "number") {
-                    tempEl.textContent = `${temp2} °C`;
-                } else {
-                    throw new Error("Ugyldig værdata ved fallback");
-                }
-            } catch (err2) {
-                console.error("Klarte ikke hente værdata:", err2);
-                tempEl.textContent = "Klarte ikke hente værdata 😢";
-            }
+            console.error(err);
+            tempEl.textContent = "Klarte ikke hente værdata 😢";
         }
     }
     getWeather();
+
 });

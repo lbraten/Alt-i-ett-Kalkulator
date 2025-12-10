@@ -1,0 +1,25 @@
+name: Oppdater værdata
+
+on:
+  schedule:
+    - cron: '0 * * * *'  # Kjør hver time (UTC):contentReference[oaicite:4]{index=4}
+
+jobs:
+  update-weather:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          token: ${{ secrets.MY_PAT_TOKEN }}
+      - name: Hent vær fra MET.no
+        run: |
+          # Bruk MET.no Locationforecast for Oslo (lat=59.91, lon=10.75)
+          curl -s -H "User-Agent: MinSide/1.0 (https://example.com)" \
+            "https://api.met.no/weatherapi/locationforecast/2.0/compact?lat=59.91&lon=10.75" \
+            > data/weather.json
+          # Commit og push endringene
+          git config user.name "GitHub Actions Bot"
+          git config user.email "actions@github.com"
+          git add data/weather.json
+          git commit -m "Oppdaterer værdata"
+          git push
