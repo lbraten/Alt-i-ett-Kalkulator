@@ -27,8 +27,7 @@ div {
 button {
         
     background: #0df2d7;
-    color: white;
-    border: 1px solid rgb(13, 242, 215);
+    border: 0px solid rgb(242, 105, 13);
     padding: 0.6rem 1.2rem;
     border-radius: 12px;
     cursor: pointer;
@@ -37,7 +36,6 @@ button {
 
 button:hover {
     background: #9efaef;
-    box-shadow: inset 0 0 0 1px #9efaef;
 
 }
 
@@ -47,7 +45,7 @@ input[type="date"],
 input[type="text"] {
     padding: 0.5rem 0.8rem;
     margin: 0.5rem; /* legger litt space på alle sider */
-    border: 2px solid rgb(13, 242, 215);
+    border: 1px solid rgb(13, 242, 215);
     border-radius: 12px;
     font-size: 1rem;
     width: 150px;
@@ -107,6 +105,7 @@ h2 {
     grid-template-columns: repeat(4, 1fr);
     gap: 8px;
     background: #071627;
+    color: white
 }
 
 .calc-btn {
@@ -114,32 +113,32 @@ h2 {
     font-size: 1.1rem;
     border: none;
     border-radius: 8px;
-    background: #7a7a7a;
+    background: #636a79;
     cursor: pointer;
     transition: background 0.2s;
 }
 
 .calc-btn:hover {
-    background: #bbb;
+    background: #495869;
 }
 
 .operator {
-    background: #4f46e5;
+    background: rgb(15, 33, 51);
 }
 
 .operator:hover {
-    background: #6366f1;
+    background: #003c42;
 }
 
 .equal {
     grid-column: span 4;
-    background: #4CAF50;
-    color: white;
+    background: #0df2d7;
+    color: rgb(0, 0, 0);
     font-weight: bold;
 }
 
 .equal:hover {
-    background: #45a049;
+    background: #9efaef;
 }
 
 .converter {
@@ -152,4 +151,8 @@ h2 {
     font-size: 1.2rem;
     margin-top: 1rem;
 
+}
+
+.resultbtn {
+    color:#ff0000
 }

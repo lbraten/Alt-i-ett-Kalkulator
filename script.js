@@ -261,24 +261,110 @@ document.addEventListener("DOMContentLoaded", () => {
     resetBtn.addEventListener("click", resetNedtelling);
     oppdaterCountdown();
 
-    // 🌦️ Vær: les kun fra data/weather.json
-    async function getWeather() {
-        const tempEl = document.querySelector(".temp");
+
+        // 🌦️ Vær: prøv data fra data/weather.json, ellers fallback til MET.no (med User-Agent)
+        async function getWeather() {
+        const el = {
+            temp: document.querySelector(".temp"),
+            feels: document.querySelector(".feelslike"),
+            wind: document.querySelector(".wind"),
+            humidity: document.querySelector(".humidity"),
+            clouds: document.querySelector(".clouds"),
+            pressure: document.querySelector(".pressure"),
+            precip: document.querySelector(".precip"),
+            symbol: document.querySelector(".symbol"),
+        };
+
+        // Hjelpere
+        const degToDir = (deg) => {
+            // 16-sektors kompass
+            const dirs = ["N","NØ","Ø","SØ","S","SV","V","NV","N"]; // kort variant
+            const idx = Math.round(((deg % 360) / 45));
+            return dirs[idx];
+        };
+
+        // Enkel vindkjøling (metodisk ikke 100% offisiell; gir “ok” indikator ved lave temp)
+        const feelsLike = (tC, windMs) => {
+            if (tC === undefined || windMs === undefined) return undefined;
+            // Konverter til km/t for en enkel formel (ikke offisiell WCI)
+            const v = windMs * 3.6;
+            // Grov tilnærming: føles = T - k * v, lavere k når varmere
+            const k = tC <= 5 ? 0.1 : 0.03;
+            return Math.round((tC - k * v) * 10) / 10;
+        };
+
+        const render = (data) => {
+            const ts = data?.properties?.timeseries?.[0];
+            if (!ts) throw new Error("Mangler timeseries[0]");
+
+            const now = ts.data?.instant?.details || {};
+            const next1h = ts.data?.next_1_hours;
+            // next_6_hours finnes ofte også: ts.data?.next_6_hours
+
+            const temp = now.air_temperature;
+            const wind = now.wind_speed; // m/s
+            const gust = now.wind_speed_of_gust; // m/s
+            const windDir = now.wind_from_direction; // grader
+            const rh = now.relative_humidity; // %
+            const clouds = now.cloud_area_fraction; // %
+            const pressure = now.air_pressure_at_sea_level; // hPa
+
+            const feels = feelsLike(temp, wind);
+
+            // Oppdater DOM – legg inn kun hvis felt finnes
+            if (typeof temp === "number" && el.temp) el.temp.textContent = `${temp} °C`;
+            if (typeof feels === "number" && el.feels) el.feels.textContent = `Føles som: ${feels} °C`;
+
+            if (typeof wind === "number" && typeof windDir === "number" && el.wind) {
+            const dirTxt = degToDir(windDir);
+            const gustTxt = typeof gust === "number" ? ` (kast: ${gust.toFixed(1)} m/s)` : "";
+            el.wind.textContent = `Vind: ${wind.toFixed(1)} m/s ${dirTxt}${gustTxt}`;
+            }
+
+            if (typeof rh === "number" && el.humidity) el.humidity.textContent = `Luftfuktighet: ${Math.round(rh)}%`;
+            if (typeof clouds === "number" && el.clouds) el.clouds.textContent = `Skydekke: ${Math.round(clouds)}%`;
+            if (typeof pressure === "number" && el.pressure) el.pressure.textContent = `Trykk: ${Math.round(pressure)} hPa`;
+
+            if (next1h) {
+            const precip = next1h?.details?.precipitation_amount;
+            const sym = next1h?.summary?.symbol_code;
+            if (typeof precip === "number" && el.precip) el.precip.textContent = `Nedbør (neste 1t): ${precip.toFixed(1)} mm`;
+            if (sym && el.symbol) {
+                // Du kan senere mappe symbol_code -> ikonfil (f.eks. 'partlycloudy_day' -> /icons/partlycloudy_day.svg)
+                el.symbol.textContent = `Værsymbol: ${sym}`;
+                // Eksempel for ikon:
+                // el.symbol.innerHTML = `<img src="/icons/${sym}.svg" alt="${sym}" width="28" height="28">`;
+            }
+            }
+        };
+
+        // 1) Prøv same-origin JSON (Actions) først
         try {
             const res = await fetch("data/weather.json", { cache: "no-cache" });
-            if (!res.ok) throw new Error("Kunne ikke laste weather.json");
+            if (!res.ok) throw new Error("weather.json mangler");
             const data = await res.json();
-            const temp = data?.properties?.timeseries?.[0]?.data?.instant?.details?.air_temperature;
-            if (typeof temp === "number") {
-                tempEl.textContent = `${temp} °C`;
-            } else {
-                throw new Error("Ugyldig værformat");
-            }
+            render(data);
+            return;
         } catch (err) {
-            console.error(err);
-            tempEl.textContent = "Klarte ikke hente værdata 😢";
+            console.warn("Bruker ikke weather.json:", err);
         }
-    }
-    getWeather();
+
+        // 2) Fallback: direkte MET.no (med User-Agent)
+        try {
+            const url = "https://api.met.no/weatherapi/locationforecast/2.0/compact?lat=59.91&lon=10.75";
+            const res2 = await fetch(url, {
+            headers: {
+                // Sett din egen identifikator/kontaktinfo i UA i produksjon (se MET.no guidelines)
+                "User-Agent": "LeandersVærWidget/1.0 (kontakt: example@example.com)"
+            }
+            });
+            if (!res2.ok) throw new Error(`MET.no ${res2.status}`);
+            const data2 = await res2.json();
+            render(data2);
+        } catch (err2) {
+            console.error("Klarte ikke hente værdata:", err2);
+            if (el.temp) el.temp.textContent = "Klarte ikke hente værdata 😢";
+        }
+        }
 
 });
