@@ -17,8 +17,9 @@ document.addEventListener("DOMContentLoaded", () => {
             const value = parseFloat(document.getElementById("percentValue").value);
             const percent = parseFloat(document.getElementById("percentPercent").value);
             const resultEl = document.getElementById("percentResult");
-            if (!isNaN(value) && !isNaN(percent) && resultEl) {
-                resultEl.innerText = (value * percent / 100).toFixed(2);
+            if (!isNaN(value) && !isNaN(percent) && resultEl) {   
+                const result = (value * percent / 100).toFixed(2);
+                resultEl.textContent = `Resultat: ${result}`;
             } else if (resultEl) {
                 resultEl.innerText = "Skriv inn gyldige tall.";
             }

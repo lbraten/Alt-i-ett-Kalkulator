@@ -31,14 +31,31 @@ div.background1 {
     background-color: rgb(15, 33, 51);
     padding: 1.5rem;
     border-radius: 12px;
+}
 
+.morkboks {
+    background-color: rgb(7, 22, 39);
+    padding: 1rem;
+    height:fit-content;
+    border-radius: 12px;
+}
+
+#percentResult {
+    margin-left: 15px;
+    color:#ffffff
+}
+
+.percentResult {
+    background: rgb(15, 33, 51);
+    padding: 1px;
+    border-radius: 12px;
 }
 
 /* Knappestil */
 button {
-        
     background: #0df2d7;
     border: 0px solid rgb(242, 105, 13);
+    padding-top: 10px;
     padding: 0.6rem 1.2rem;
     border-radius: 8px;
     cursor: pointer;
@@ -47,7 +64,10 @@ button {
 
 button:hover {
     background: #9efaef;
+}
 
+button.vanligknapp {
+    margin: 1rem;
 }
 
 /* Inputfelter */
@@ -56,18 +76,27 @@ input[type="date"],
 input[type="text"] {
     padding: 1rem 1rem;
     margin: 0rem; /* legger litt space på alle sider */
-    border: 2px solid rgb(13, 242, 215);
+    border: 1px solid #243242;
     border-radius: 8px;
     font-size: 1rem;
     width: 150px;
-    Color: #000
+    background-color: rgb(15, 33, 51);
+    color:#ffffff
 }
 
 
+
+input[type="number"]:hover,
+input[type="date"]:hover,
+input[type="text"]:hover {
+    border-color: #ffff;
+}
+
+
+
 input:focus {
-    border-color: #ff0000;
+    border-color: #ffff;
     outline: none;
-    box-shadow: 0 0 0 2px rgba(61, 51, 255, 0.2);
 }
 
 /* Overskrifter */
@@ -76,7 +105,7 @@ h1 {
     font-weight: 600;
     margin-bottom: 2rem;
     margin-right: 40px;
-    grid-column: 1 / -1; /* gjør at h1 alltid strekker seg over hele bredden */
+    grid-column: 1 / -1;
 }
 
 h2 {

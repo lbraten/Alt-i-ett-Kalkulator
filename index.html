@@ -19,10 +19,14 @@
             <!-- Prosentkalkulator -->
             <div class="bordershadow">
                 <h2>Prosentkalkulator</h2>
-                <input id="percentValue" type="number" placeholder="Tall" />
-                <input id="percentPercent" type="number" placeholder="%" />
-                <button id="percentButton">Regn ut</button>
-                <p id="percentResult"></p>
+                <div class="morkboks">
+                    <input id="percentValue" type="number" placeholder="Tall" />
+                    <input id="percentPercent" type="number" placeholder="%" />
+                    <button id="percentButton" class="vanligknapp">Regn ut</button>
+                    <div class="percentResult">
+                        <p id="percentResult">Resultat:</p>
+                    </div>
+                </div>
             </div>
 
             <!-- Timeslønn kalkulator -->
@@ -30,7 +34,7 @@
                 <h2>Timeslønn / månedslønn</h2>
                 <input id="monthlySalary" type="number" placeholder="Månedslønn" />
                 <input id="hoursPerWeek" type="number" placeholder="Timer per uke" />
-                <button id="hourlyButton">Regn ut timeslønn</button>
+                <button id="hourlyButton" class="vanligknapp">Regn ut timeslønn</button>
                 <p id="hourlyResult"></p>
             </div>
 
@@ -38,7 +42,7 @@
             <div class="bordershadow">
                 <h2>Alder</h2>
                 <input id="birthDate" type="date" />
-                <button id="ageButton">Regn ut alder</button>
+                <button id="ageButton" class="vanligknapp">Regn ut alder</button>
                 <p id="ageResult"></p>
             </div>
 
@@ -47,7 +51,7 @@
                 <h2>Differanse mellom datoer</h2>
                 <input id="date1" type="date" />
                 <input id="date2" type="date" />
-                <button id="dateDiffButton">Regn ut</button>
+                <button id="dateDiffButton" class="vanligknapp">Regn ut</button>
                 <p id="dateDiffResult"></p>
             </div>
 
@@ -56,7 +60,7 @@
                 <h2>Differanse mellom klokkeslett</h2>
                 <input id="time1" type="time" />
                 <input id="time2" type="time" />
-                <button id="timeDiffButton">Regn ut</button>
+                <button id="timeDiffButton" class="vanligknapp">Regn ut</button>
                 <p id="timeDiffResult"></p>
             </div>
 
@@ -71,7 +75,7 @@
                     <option value="Europe/Moscow">MSK / Moscow</option>
                     <!-- flere tidssoner... -->
                 </select>
-                <button id="timezoneButton">Vis tid</button>
+                <button id="timezoneButton" class="vanligknapp">Vis tid</button>
                 <p id="timezoneResult"></p>
             </div>
 
@@ -115,7 +119,7 @@
                         <option value="GBP">Britiske Pund (GBP)</option>
                         <!-- flere valutaer... -->
                     </select>
-                    <button id="convertBtn">Konverter</button>
+                    <button id="convertBtn" class="vanligknapp">Konverter</button>
                 </div>
                 <div id="result"></div>
             </div>
