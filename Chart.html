@@ -1,0 +1,142 @@
+
+<!-- HTML -->
+<canvas id="myAreaChart" style="width:100%;max-width:800px;height:320px"></canvas>
+
+<script type="module">
+  import {
+    Chart,
+    LineController,
+    LineElement,
+    PointElement,
+    LinearScale,
+    TimeSeriesScale,
+    Tooltip,
+    Filler,
+    CategoryScale,
+    Legend,
+  } from 'https://cdn.jsdelivr.net/npm/chart.js@4.4.4/dist/chart.esm.js';
+
+  // Registrer nødvendige komponenter
+  Chart.register(
+    LineController, LineElement, PointElement,
+    LinearScale, CategoryScale, TimeSeriesScale,
+    Tooltip, Filler, Legend
+  );
+
+  const lineColor = getComputedStyle(document.documentElement)
+    .getPropertyValue('--bfc-attn')?.trim() || '#3b82f6';
+  const gridColor = getComputedStyle(document.documentElement)
+    .getPropertyValue('--bfc-base-dimmed')?.trim() || 'rgba(0,0,0,0.08)';
+  const tickColor = getComputedStyle(document.documentElement)
+    .getPropertyValue('--bfc-base-c-2')?.trim() || '#6b7280';
+
+  const locale = 'en-US';
+  const monthYearFormatter = new Intl.DateTimeFormat(locale, { month: 'short', year: 'numeric' });
+  const numberFormatter = new Intl.NumberFormat(locale);
+
+  const raw = [
+    { date: '2023-01', value: 242725 },
+    { date: '2023-02', value: 237632 },
+    { date: '2023-03', value: 216610 },
+    { date: '2023-04', value: 225223 },
+    { date: '2023-05', value: 210043 },
+    { date: '2023-06', value: 237577 },
+    { date: '2023-07', value: 266538 },
+    { date: '2023-08', value: 278820 },
+    { date: '2023-09', value: 252026 },
+    { date: '2023-10', value: 258326 },
+    { date: '2023-11', value: 260691 },
+    { date: '2023-12', value: 262566 },
+    { date: '2024-01', value: 276147 },
+    { date: '2024-02', value: 240784 },
+    { date: '2024-03', value: 274169 },
+    { date: '2024-04', value: 224765 },
+    { date: '2024-05', value: 211219 },
+    { date: '2024-06', value: 267703 },
+    { date: '2024-07', value: 274453 },
+    { date: '2024-08', value: 246658 },
+  ];
+
+  // For Chart.js bruker vi labels + data arrays
+  const labels = raw.map(d => monthYearFormatter.format(new Date(d.date)));
+  const values = raw.map(d => d.value);
+
+  const ctx = document.getElementById('myAreaChart').getContext('2d');
+
+  // Lag en vertikal gradient (topp -> bunn)
+  const gradient = ctx.createLinearGradient(0, 0, 0, ctx.canvas.height);
+  gradient.addColorStop(0, hexToRgba(lineColor, 0.8));
+  gradient.addColorStop(1, hexToRgba(lineColor, 0));
+
+  const chart = new Chart(ctx, {
+    type: 'line',
+    data: {
+      labels,
+      datasets: [{
+        data: values,
+        borderColor: lineColor,
+        borderWidth: 2,
+        fill: true,
+        backgroundColor: gradient,
+        tension: 0.4, // "monotone"-aktig kurve
+        pointRadius: 0, // Skjul punkter
+      }],
+    },
+    options: {
+      responsive: true,
+      maintainAspectRatio: false,
+      layout: { padding: { left: 10 } },
+      plugins: {
+        legend: { display: false },
+        tooltip: {
+          intersect: false,
+          mode: 'index',
+          callbacks: {
+            label: (ctx) => numberFormatter.format(ctx.parsed.y),
+            title: (items) => items.map(i => labels[i.dataIndex]),
+          },
+        },
+      },
+      scales: {
+        x: {
+          grid: { display: false },
+          ticks: { display: false }, // skjul X-aksen som i koden din
+        },
+        y: {
+          grid: {
+            color: gridColor,
+            borderDash: [5, 5],
+            drawTicks: false,
+          },
+          ticks: {
+            color: tickColor,
+            callback: (v) => numberFormatter.format(v),
+            font: { size: 14 },
+            padding: 8,
+          },
+          border: { display: false },
+        },
+      },
+    },
+  });
+
+  // Hjelpefunksjon for RGBA
+  function hexToRgba(hex, alpha = 1) {
+    const c = hex.replace('#', '');
+    const bigint = parseInt(c.length === 3 ? c.split('').map(x => x + x).join('') : c, 16);
+    const r = (bigint >> 16) & 255;
+    const g = (bigint >> 8) & 255;
+    const b = bigint & 255;
+    return `rgba(${r}, ${g}, ${b}, ${alpha})`;
+  }
+
+  // Rebuild gradient on resize to keep nice falloff
+  new ResizeObserver(() => {
+    const { height } = ctx.canvas.getBoundingClientRect();
+    const g = ctx.createLinearGradient(0, 0, 0, height);
+    g.addColorStop(0, hexToRgba(lineColor, 0.8));
+    g.addColorStop(1, hexToRgba(lineColor, 0));
+    chart.data.datasets[0].backgroundColor = g;
+    chart.update('none');
+  }).observe(ctx.canvas);
+</script>

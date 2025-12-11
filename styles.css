@@ -67,7 +67,8 @@ button:hover {
 }
 
 button.vanligknapp {
-    margin: 1rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
 }
 
 /* Inputfelter */
@@ -146,29 +147,35 @@ h2 {
     grid-template-columns: repeat(4, 1fr);
     gap: 8px;
     background: #071627;
-    color: white
+    border: 1px solid #243242;
+    padding: 1rem;
+    border-radius: 12px;
 }
 
 .calc-btn {
     padding: 15px;
     font-size: 1.1rem;
-    border: none;
     border-radius: 8px;
-    background: #636a79;
+    border: none;
+    background: rgb(15, 33, 51);
     cursor: pointer;
     transition: background 0.2s;
+    color:#ffffff
 }
 
 .calc-btn:hover {
-    background: #495869;
+    background: #003c42;
 }
 
 .operator {
     background: rgb(15, 33, 51);
+    border: 1px solid #0df2d7;
 }
 
 .operator:hover {
-    background: #003c42;
+    outline: 2px solid #0df2d7;
+    outline-offset: -2px;
+    background: rgb(15, 33, 51);
 }
 
 .equal {
