@@ -21,14 +21,12 @@
             <!-- Prosentkalkulator -->
             <div class="bordershadow">
                 <h2>Prosentkalkulator</h2>
-                <div class="morkboks">
                     <input id="percentValue" type="number" placeholder="Tall" />
                     <input id="percentPercent" type="number" placeholder="%" />
                     <button id="percentButton" class="vanligknapp">Regn ut</button>
                     <div class="percentResult">
                         <p id="percentResult">Resultat:</p>
                     </div>
-                </div>
             </div>
 
             <!-- Timeslønn kalkulator -->
@@ -37,7 +35,9 @@
                 <input id="monthlySalary" type="number" placeholder="Månedslønn" />
                 <input id="hoursPerWeek" type="number" placeholder="Timer per uke" />
                 <button id="hourlyButton" class="vanligknapp">Regn ut timeslønn</button>
-                <p id="hourlyResult"></p>
+                <div class="percentResult">
+                    <p id="hourlyResult">Timeslønn:</p>
+                </div>
             </div>
 
             <!-- Alderskalkulator -->
@@ -45,16 +45,18 @@
                 <h2>Alder</h2>
                 <input id="birthDate" type="date" />
                 <button id="ageButton" class="vanligknapp">Regn ut alder</button>
-                <p id="ageResult"></p>
+                <div class="percentResult">
+                    <p id="ageResult">Omtrent ...</p>
+                </div>
             </div>
 
             <!-- Differanse mellom datoer -->
             <div class="bordershadow">
                 <h2>Differanse mellom datoer</h2>
                 <p>Fra:</p>
-                <input id="date1" type="date" />
+                <input class="klokkeslettinput" id="date1" type="date" />
                 <p>Til:</p>
-                <input id="date2" type="date" />
+                <input class="klokkeslettinput" id="date2" type="date" />
                 <button id="dateDiffButton" class="vanligknapp">Regn ut</button>
                 <p id="dateDiffResult"></p>
             </div>
@@ -153,7 +155,7 @@
             <!-- Dagens historiske -->
             <div class="bordershadow">
                 <h2>Dagens historiske</h2>
-                <p id="dagens">Laster...</p>
+                <div id="dagens">Laster...</div>
             </div>
 
             <!-- Klokke-widget -->
@@ -176,15 +178,46 @@
                 <div class="muted">Hint: La feltene stå tomme for å starte en rask 10‑minutters nedtelling.</div>
             </div>
 
-            <!-- Været -->
-            <div id="weather" class="bordershadow">
-                <h2>Været i Oslo</h2>
-                <p class="temp">Henter...</p>
+            
+            <!-- Vær (Open-Meteo) -->
+            <div id="openMeteoWidget" class="bordershadow">
+            <h2>Vær (Open-Meteo)</h2>
+
+            <div class="converter">
+                <!-- By-søk -->
+                <input id="omCity" type="text" placeholder="By (f.eks. Molde, Oslo)" />
+                <button id="omSearchCityBtn" class="vanligknapp" type="button">Søk by</button>
             </div>
+
+            <div class="converter" style="margin-top: 8px;">
+                <!-- Treff-liste -->
+                <select id="omCityResults" class="lysereboks" style="width: 100%;" hidden></select>
+            </div>
+
+            <div class="converter" style="margin-top: 10px;">
+                <!-- Koordinater -->
+                <input id="omLat" type="number" step="0.0001" placeholder="Latitude (f.eks. 62.7370)" />
+                <input id="omLon" type="number" step="0.0001" placeholder="Longitude (f.eks. 7.1600)" />
+                <button id="omFetchBtn" class="vanligknapp" type="button">Hent vær</button>
+            </div>
+
+            <div class="converter" style="margin-top: 10px;">
+                <button id="omMyLocationBtn" class="vanligknapp" type="button">Bruk min posisjon</button>
+            </div>
+
+            <div class="percentResult" style="margin-top: 10px;">
+                <p id="omStatus" style="margin: 0;">Klar.</p>
+            </div>
+
+            <div id="omOutput" style="margin-top: 10px;">
+                <p style="margin:0;">Ingen data enda.</p>
+            </div>
+            </div>
+
 
             <!-- Dagens quote -->
             <div class="bordershadow" id="quote">
-                <h2>Dagens sitat</h2>
+                <h2>Sitat</h2>
                 <p id="quoteResult">Henter...</p>
             </div>
 
@@ -208,7 +241,8 @@
             </div>
         </main>
     </div>
-
+    <script src="onthisday.js"></script>
+    <script src="open-meteo.js"></script>
     <script src="script.js"></script>
     <script src="fund-klp.js"></script>
     <script src="klokke.js"></script>

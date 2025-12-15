@@ -1,4 +1,3 @@
-
 // 🔄 Dato og tid (digital)
 function updateDateTime() {
   const now = new Date();

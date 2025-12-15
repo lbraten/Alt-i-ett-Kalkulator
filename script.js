@@ -154,47 +154,42 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     }
 
-    // 📜 Dagens sitat (leses fra data/quote.json generert av Actions)
-    async function getDailyQuote() {
-        const el = document.getElementById("quoteResult");
-        try {
-            const res = await fetch("data/quote.json");
-            if (!res.ok) throw new Error("quote.json mangler");
-            const data = await res.json();
-            // For eksempel fra Quotable: [{ content: "...", author: "..." }]
-            const quote = data[0]?.content;
-            const author = data[0]?.author;
-            if (quote && author) {
-                el.innerText = `"${quote}" — ${author}`;
-            } else {
-                el.innerText = "Ingen sitat tilgjengelig.";
-            }
-        } catch (err) {
-            console.error(err);
-            el.innerText = "Klarte ikke hente dagens sitat 😅";
-        }
-    }
-    getDailyQuote();
 
-    // 🗓️ Dagens historiske fra dine json-filer/<måned>.json
-    (function loadOnThisDay() {
-        const idag = new Date();
-        const day = String(idag.getDate()).padStart(2, "0");
-        const maneder = ["januar","februar","mars","april","mai","juni","juli","august","september","oktober","november","desember"];
-        const monthNavn = maneder[idag.getMonth()];
-        const filNavn = `json-filer/${monthNavn}.json`;
-        fetch(filNavn)
-            .then(r => { if (!r.ok) throw new Error("Kunne ikke laste JSON-filen"); return r.json(); })
-            .then(data => {
-                const key = `${String(idag.getMonth() + 1).padStart(2,"0")}-${day}`; // "MM-DD"
-                const dagensHendelse = data[key] || "Ingen historisk hendelse registrert for i dag.";
-                document.getElementById("dagens").textContent = dagensHendelse;
-            })
-            .catch(error => {
-                console.error(error);
-                document.getElementById("dagens").textContent = "Kunne ikke laste dagens hendelse.";
-            });
-    })();
+    // 📜 Sitat fra Quotable (random ved hver lasting)
+    async function getDailyQuote() {
+    const el = document.getElementById("quoteResult");
+
+    try {
+        // /quotes/random returnerer en ARRAY med quotes (default 1 hvis limit ikke settes)
+        const url = "https://api.quotable.io/quotes/random?limit=1";
+
+        const res = await fetch(url, {
+        // mode: "cors" er default for cross-origin fetch, men kan stå for tydelighet
+        mode: "cors",
+        headers: { "Accept": "application/json" },
+        });
+
+        if (!res.ok) throw new Error(`Quotable-feil: ${res.status}`);
+
+        const data = await res.json();
+        const q = data?.[0];
+
+        const quote = q?.content;
+        const author = q?.author;
+
+        if (quote && author) {
+        el.innerText = `"${quote}" — ${author}`;
+        } else {
+        el.innerText = "Ingen sitat tilgjengelig.";
+        }
+    } catch (err) {
+        console.error(err);
+        el.innerText = "Klarte ikke hente sitat 😅";
+    }
+    }
+
+    getDailyQuote();
+    ``
 
     // ⏱️ Klokke-widget
     const timerDisplay = document.getElementById("timeren");

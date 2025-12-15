@@ -54,15 +54,16 @@ div.background1 {
 }
 
 .percentResult {
-    background: rgb(15, 33, 51);
+    background: rgb(7, 22, 39);
     padding: 1px;
     border-radius: 12px;
+    border: 1px solid #243242;
 }
 
 /* Knappestil */
 button {
     background: #0df2d7;
-    border: 0px solid rgb(242, 105, 13);
+    border: none;
     padding-top: 10px;
     padding: 0.6rem 1.2rem;
     border-radius: 8px;
@@ -82,6 +83,7 @@ button.vanligknapp {
 /* Inputfelter */
 input[type="number"],
 input[type="date"],
+input[type="time"],
 input[type="text"] {
     padding: 1rem 1rem;
     margin: 0rem; /* legger litt space på alle sider */
@@ -230,4 +232,24 @@ h2 {
   width: 100%;
   height: auto;
   margin: 8px 0 4px;
+}
+
+
+a:link,
+a:visited {
+  color: #0df2d7;
+
+  /* Underline alltid */
+  text-decoration-line: underline;
+  text-decoration-color: currentColor;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 2px;
+  transition: text-decoration-thickness 120ms ease;
+}
+
+a:hover {
+  color: #0df2d7;
+
+  /* Bare gjør streken tykkere ved hover */
+  text-decoration-thickness: 2px;
 }
