@@ -1,7 +1,31 @@
 {
-  "updatedAt": "2026-09-06T21:07:24.383Z",
+  "updatedAt": "2026-09-06T22:59:47.835Z",
   "source": "https://www.nrk.no/nyheter/siste.rss",
   "items": [
+    {
+      "title": "AfD-kandidat åpner for nyvalg i Sachsen-Anhalt",
+      "link": "https://www.nrk.no/nyheter/afd-kandidat-apner-for-nyvalg-i-sachsen-anhalt-1.18016250",
+      "category": "Tyskland",
+      "pubDate": "Sun, 06 Sep 2026 22:52:09 GMT"
+    },
+    {
+      "title": "USAs delegasjon har forlatt Kyiv",
+      "link": "https://www.nrk.no/nyheter/usas-delegasjon-har-forlatt-kyiv-1.18016248",
+      "category": "Krigen i Ukraina",
+      "pubDate": "Sun, 06 Sep 2026 22:06:49 GMT"
+    },
+    {
+      "title": "Minst fem døde etter at lastefly kjørte av rullebanen i Miami",
+      "link": "https://www.nrk.no/nyheter/minst-fem-dode-etter-at-lastefly-kjorte-av-rullebanen-i-miami-1.18016245",
+      "category": "USA",
+      "pubDate": "Sun, 06 Sep 2026 21:30:53 GMT"
+    },
+    {
+      "title": "Regjeringen i Danmark foreslår aldersgrense for sosiale medier",
+      "link": "https://www.nrk.no/nyheter/regjeringen-i-danmark-foreslar-aldersgrense-for-sosiale-medier-1.18016244",
+      "category": "Danmark",
+      "pubDate": "Sun, 06 Sep 2026 21:07:46 GMT"
+    },
     {
       "title": "Lastefly kjørte av rullebanen ved landing i Miami",
       "link": "https://www.nrk.no/nyheter/lastefly-kjorte-av-rullebanen-ved-landing-i-miami-1.18015994",
@@ -13,30 +37,6 @@
       "link": "https://www.nrk.no/stor-oslo/roykgranat-utlost-pa-ellingsrud_-soker-etter-personer-1.18016166",
       "category": "Nyhetssenter Stor-Oslo",
       "pubDate": "Sun, 06 Sep 2026 18:15:21 GMT"
-    },
-    {
-      "title": "Trailer har fått hol i dieseltank – 500 liter diesel har rent ut i vegbana",
-      "link": "https://www.nrk.no/vestland/trailer-har-fatt-hol-i-dieseltank-_-500-liter-diesel-har-rent-ut-i-vegbana---1.18016162",
-      "category": "Nyhetssenter Vestland",
-      "pubDate": "Sun, 06 Sep 2026 17:28:52 GMT"
-    },
-    {
-      "title": "Netanyahu beordrer evakuering av enkelte bosettinger på Vestbredden",
-      "link": "https://www.nrk.no/nyheter/netanyahu-beordrer-evakuering-av-enkelte-bosettinger-pa-vestbredden-1.18016119",
-      "category": "Israel",
-      "pubDate": "Sun, 06 Sep 2026 17:24:33 GMT"
-    },
-    {
-      "title": "Ein person alvorleg skadd i ulykke - frakta med luftambulanse",
-      "link": "https://www.nrk.no/mr/ein-person-alvorleg-skadd-i-ulykke---frakta-med-luftambulanse-1.18016146",
-      "category": "Nyheitssenter Møre og Romsdal",
-      "pubDate": "Sun, 06 Sep 2026 17:04:31 GMT"
-    },
-    {
-      "title": "Reuters: Zelenskyj planlegger tur til Norge for å diskutere anti-ballistiske våpen",
-      "link": "https://www.nrk.no/nyheter/reuters_-zelenskyj-planlegger-tur-til-norge-for-a-diskutere-anti-ballistiske-vapen-1.18016093",
-      "category": "Krigen i Ukraina",
-      "pubDate": "Sun, 06 Sep 2026 16:17:19 GMT"
     }
   ]
 }
