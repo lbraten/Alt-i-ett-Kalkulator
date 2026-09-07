@@ -1,7 +1,19 @@
 {
-  "updatedAt": "2026-09-06T22:59:47.835Z",
+  "updatedAt": "2026-09-07T00:52:48.989Z",
   "source": "https://www.nrk.no/nyheter/siste.rss",
   "items": [
+    {
+      "title": "Israel med nye angrep i Sør-Libanon",
+      "link": "https://www.nrk.no/nyheter/israel-med-nye-angrep-i-sor-libanon-1.18016252",
+      "category": "Libanon og Israel",
+      "pubDate": "Mon, 07 Sep 2026 00:50:48 GMT"
+    },
+    {
+      "title": "Ukraina: USAs utsendinger hadde med nye forslag",
+      "link": "https://www.nrk.no/nyheter/ukraina_-usas-utsendinger-hadde-med-nye-forslag-1.18016251",
+      "category": "Krigen i Ukraina",
+      "pubDate": "Sun, 06 Sep 2026 23:56:58 GMT"
+    },
     {
       "title": "AfD-kandidat åpner for nyvalg i Sachsen-Anhalt",
       "link": "https://www.nrk.no/nyheter/afd-kandidat-apner-for-nyvalg-i-sachsen-anhalt-1.18016250",
@@ -25,18 +37,6 @@
       "link": "https://www.nrk.no/nyheter/regjeringen-i-danmark-foreslar-aldersgrense-for-sosiale-medier-1.18016244",
       "category": "Danmark",
       "pubDate": "Sun, 06 Sep 2026 21:07:46 GMT"
-    },
-    {
-      "title": "Lastefly kjørte av rullebanen ved landing i Miami",
-      "link": "https://www.nrk.no/nyheter/lastefly-kjorte-av-rullebanen-ved-landing-i-miami-1.18015994",
-      "category": "USA",
-      "pubDate": "Sun, 06 Sep 2026 19:14:03 GMT"
-    },
-    {
-      "title": "Røykgranat utløst på Ellingsrud: Søker etter personer",
-      "link": "https://www.nrk.no/stor-oslo/roykgranat-utlost-pa-ellingsrud_-soker-etter-personer-1.18016166",
-      "category": "Nyhetssenter Stor-Oslo",
-      "pubDate": "Sun, 06 Sep 2026 18:15:21 GMT"
     }
   ]
 }
