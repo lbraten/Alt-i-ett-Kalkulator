@@ -1,42 +1,42 @@
 {
-  "updatedAt": "2026-09-07T17:27:48.956Z",
+  "updatedAt": "2026-09-07T20:44:51.834Z",
   "source": "https://www.nrk.no/nyheter/siste.rss",
   "items": [
+    {
+      "title": "Dødsulykken i Gjøvik: Siktet mann løslates",
+      "link": "https://www.nrk.no/nyheter/dodsulykken-i-gjovik_-siktet-mann-loslates-1.18017333",
+      "category": "NRK Nyheter",
+      "pubDate": "Mon, 07 Sep 2026 20:35:07 GMT"
+    },
+    {
+      "title": "Fem svensker pågrepet på Kypros",
+      "link": "https://www.nrk.no/nyheter/fem-svensker-pagrepet-pa-kypros-1.18017324",
+      "category": "Kypros",
+      "pubDate": "Mon, 07 Sep 2026 19:34:50 GMT"
+    },
+    {
+      "title": "Person møtte opp på legevakten i Bærum med stikkskader etter voldshendelse",
+      "link": "https://www.nrk.no/stor-oslo/person-motte-opp-pa-legevakten-i-baerum-med-stikkskader-etter-voldshendelse-1.18017329",
+      "category": "Nyhetssenter Stor-Oslo",
+      "pubDate": "Mon, 07 Sep 2026 19:26:39 GMT"
+    },
+    {
+      "title": "Politiet stenger deler av luftrommet over Østlandet tirsdag til torsdag",
+      "link": "https://www.nrk.no/nyheter/politiet-stenger-deler-av-luftrommet-over-ostlandet-tirsdag-til-torsdag-1.18017256",
+      "category": "Kongefamilien",
+      "pubDate": "Mon, 07 Sep 2026 19:17:11 GMT"
+    },
+    {
+      "title": "Stadig flere israelske soldater tar sitt eget liv",
+      "link": "https://www.nrk.no/nyheter/stadig-flere-israelske-soldater-tar-sitt-eget-liv-1.18017167",
+      "category": "Israel",
+      "pubDate": "Mon, 07 Sep 2026 17:55:55 GMT"
+    },
     {
       "title": "Saudiarabisk oljeselskap har inngått avtale med Taliban",
       "link": "https://www.nrk.no/nyheter/saudiarabisk-oljeselskap-har-inngatt-avtale-med-taliban-1.18016946",
       "category": "Afghanistan",
       "pubDate": "Mon, 07 Sep 2026 16:50:27 GMT"
-    },
-    {
-      "title": "Latvia vil ha 300 prosent toll på korn fra Russland og Belarus",
-      "link": "https://www.nrk.no/nyheter/latvia-vil-ha-300-prosent-toll-pa-korn-fra-russland-og-belarus-1.18017159",
-      "category": "Latvia",
-      "pubDate": "Mon, 07 Sep 2026 16:16:39 GMT"
-    },
-    {
-      "title": "Fremskrittspartiet fortsatt størst i ny meningsmåling",
-      "link": "https://www.nrk.no/nyheter/fremskrittspartiet-fortsatt-storst-i-ny-meningsmaling-1.18017142",
-      "category": "Norsk politikk",
-      "pubDate": "Mon, 07 Sep 2026 16:00:17 GMT"
-    },
-    {
-      "title": "Serbias regjering vil oppløse nasjonalforsamlingen",
-      "link": "https://www.nrk.no/nyheter/serbias-regjering-vil-opplose-nasjonalforsamlingen-1.18017123",
-      "category": "Serbia",
-      "pubDate": "Mon, 07 Sep 2026 15:35:25 GMT"
-    },
-    {
-      "title": "Frankrikes statsminister deltar i kongen gravferd",
-      "link": "https://www.nrk.no/nyheter/frankrikes-statsminister-deltar-i-kongen-gravferd-1.18017075",
-      "category": "Kongefamilien",
-      "pubDate": "Mon, 07 Sep 2026 15:06:38 GMT"
-    },
-    {
-      "title": "Grindr inngår gigantforlik etter hiv-søksmål",
-      "link": "https://www.nrk.no/nyheter/grindr-inngar-gigantforlik-etter-hiv-soksmal-1.18017066",
-      "category": "Forbrukerrettigheter",
-      "pubDate": "Mon, 07 Sep 2026 14:09:25 GMT"
     }
   ]
 }
