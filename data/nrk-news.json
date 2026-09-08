@@ -1,7 +1,19 @@
 {
-  "updatedAt": "2026-09-08T19:30:48.751Z",
+  "updatedAt": "2026-09-08T22:25:43.030Z",
   "source": "https://www.nrk.no/nyheter/siste.rss",
   "items": [
+    {
+      "title": "Støre og Zelenskyj i møte",
+      "link": "https://www.nrk.no/nyheter/store-og-zelenskyj-i-mote-1.18018457",
+      "category": "Krigen i Ukraina",
+      "pubDate": "Tue, 08 Sep 2026 20:41:44 GMT"
+    },
+    {
+      "title": "Iransk nyhetsbyrå: Iransk tankskip skal være angrepet",
+      "link": "https://www.nrk.no/nyheter/iransk-nyhetsbyra_-iransk-tankskip-skal-vaere-angrepet-1.18018501",
+      "category": "Forholdet Iran – USA",
+      "pubDate": "Tue, 08 Sep 2026 19:40:10 GMT"
+    },
     {
       "title": "Støre møter Zelenskyj",
       "link": "https://www.nrk.no/nyheter/store-moter-zelenskyj-1.18018443",
@@ -25,18 +37,6 @@
       "link": "https://www.nrk.no/nyheter/canada-vil-orientere-seg-vekk-fra-usa-1.18018373",
       "category": "Canada",
       "pubDate": "Tue, 08 Sep 2026 18:39:24 GMT"
-    },
-    {
-      "title": "Elg stengte E6 ved Gardermoen – påvirker ikke kortesjekjøring",
-      "link": "https://www.nrk.no/stor-oslo/elg-stengte-e6-ved-gardermoen-_-pavirker-ikke-kortesjekjoring-1.18018418",
-      "category": "Nyhetssenter Stor-Oslo",
-      "pubDate": "Tue, 08 Sep 2026 18:24:16 GMT"
-    },
-    {
-      "title": "Zelenskyj har kommet til Norge",
-      "link": "https://www.nrk.no/nyheter/zelenskyj-har-kommet-til-norge-1.18018344",
-      "category": "Kongefamilien",
-      "pubDate": "Tue, 08 Sep 2026 17:45:03 GMT"
     }
   ]
 }
