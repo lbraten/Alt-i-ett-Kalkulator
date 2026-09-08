@@ -1,7 +1,25 @@
 {
-  "updatedAt": "2026-09-07T23:19:26.285Z",
+  "updatedAt": "2026-09-08T01:19:00.019Z",
   "source": "https://www.nrk.no/nyheter/siste.rss",
   "items": [
+    {
+      "title": "Flyplasser gjenåpnet etter askeregn i Indonesia",
+      "link": "https://www.nrk.no/nyheter/flyplasser-gjenapnet-etter-askeregn-i-indonesia-1.18017360",
+      "category": "Indonesia",
+      "pubDate": "Tue, 08 Sep 2026 00:34:22 GMT"
+    },
+    {
+      "title": "Nye russiske angrep på Kyiv",
+      "link": "https://www.nrk.no/nyheter/nye-russiske-angrep-pa-kyiv----1.18017362",
+      "category": "Krigen i Ukraina",
+      "pubDate": "Tue, 08 Sep 2026 00:11:26 GMT"
+    },
+    {
+      "title": "Lula og Bolsonaro ligger likt på valgmåling",
+      "link": "https://www.nrk.no/nyheter/lula-og-bolsonaro-ligger-likt-pa-valgmaling-1.18017361",
+      "category": "Brasil",
+      "pubDate": "Mon, 07 Sep 2026 23:50:34 GMT"
+    },
     {
       "title": "Aksjon i Stillehavet: Mannskap overlevert til Ecuador",
       "link": "https://www.nrk.no/nyheter/aksjon-i-stillehavet_-mannskap-overlevert-til-ecuador-1.18017359",
@@ -19,24 +37,6 @@
       "link": "https://www.nrk.no/nyheter/ukrainas-riksadvokat-trekker-seg-etter-korrupsjonsanklager-1.18017356",
       "category": "Ukraina",
       "pubDate": "Mon, 07 Sep 2026 21:49:05 GMT"
-    },
-    {
-      "title": "Nær to av tre tyskere er bekymret etter delstatsvalget i Sachsen-Anhalt",
-      "link": "https://www.nrk.no/nyheter/naer-to-av-tre-tyskere-er-bekymret-etter-delstatsvalget-i-sachsen-anhalt-1.18017351",
-      "category": "Tyskland",
-      "pubDate": "Mon, 07 Sep 2026 21:32:16 GMT"
-    },
-    {
-      "title": "Siktet for bildrap i Gjøvik løslates",
-      "link": "https://www.nrk.no/innlandet/siktet-for-bildrap-i-gjovik-loslates-1.18017250",
-      "category": "Nyhetssenter Innlandet",
-      "pubDate": "Mon, 07 Sep 2026 20:44:29 GMT"
-    },
-    {
-      "title": "Frifunnet for grov kroppskrenkelse",
-      "link": "https://www.nrk.no/tromsogfinnmark/frifunnet-for-grov-kroppskrenkelse-1.18017234",
-      "category": "Nyhetssenter Troms og Finnmark",
-      "pubDate": "Mon, 07 Sep 2026 20:39:21 GMT"
     }
   ]
 }
