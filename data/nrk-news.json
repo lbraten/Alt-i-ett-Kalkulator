@@ -1,42 +1,42 @@
 {
-  "updatedAt": "2026-09-08T11:36:05.913Z",
+  "updatedAt": "2026-09-08T16:13:07.300Z",
   "source": "https://www.nrk.no/nyheter/siste.rss",
   "items": [
     {
-      "title": "Kongefamilien hilser fra slottsbalkongen onsdag klokken 16.45",
-      "link": "https://www.nrk.no/nyheter/kongefamilien-hilser-fra-slottsbalkongen-onsdag-klokken-16.45-1.18017894",
+      "title": "Rumenske atomreaktorer trolig ute av drift hele september",
+      "link": "https://www.nrk.no/nyheter/rumenske-atomreaktorer-trolig-ute-av-drift-hele-september-1.18018261",
+      "category": "Romania",
+      "pubDate": "Tue, 08 Sep 2026 15:48:19 GMT"
+    },
+    {
+      "title": "Tyskland lover å levere luftvernmissiler til Ukraina",
+      "link": "https://www.nrk.no/nyheter/tyskland-lover-a-levere-luftvernmissiler-til-ukraina-1.18018251",
+      "category": "Krigen i Ukraina",
+      "pubDate": "Tue, 08 Sep 2026 15:44:43 GMT"
+    },
+    {
+      "title": "Israel krever at Storbritannia kastes ut av Gaza-råd",
+      "link": "https://www.nrk.no/nyheter/israel-krever-at-storbritannia-kastes-ut-av-gaza-rad-1.18018247",
+      "category": "Israel",
+      "pubDate": "Tue, 08 Sep 2026 15:28:57 GMT"
+    },
+    {
+      "title": "Defileringskøen er stengt",
+      "link": "https://www.nrk.no/nyheter/defileringskoen-er-stengt-1.18018245",
       "category": "Kongefamilien",
-      "pubDate": "Tue, 08 Sep 2026 11:28:41 GMT"
+      "pubDate": "Tue, 08 Sep 2026 15:25:37 GMT"
     },
     {
-      "title": "Kinas ambassadør til kong Haralds gravferd",
-      "link": "https://www.nrk.no/nyheter/kinas-ambassador-til-kong-haralds-gravferd-1.18017827",
+      "title": "Sveriges statsminister deltar i kongens gravferd",
+      "link": "https://www.nrk.no/nyheter/sveriges-statsminister-deltar-i-kongens-gravferd-1.18018204",
       "category": "Kongefamilien",
-      "pubDate": "Tue, 08 Sep 2026 11:26:40 GMT"
+      "pubDate": "Tue, 08 Sep 2026 15:21:36 GMT"
     },
     {
-      "title": "Over tusen migranter reddet utenfor kysten av Vest-Afrika på én uke",
-      "link": "https://www.nrk.no/nyheter/over-tusen-migranter-reddet-utenfor-kysten-av-vest-afrika-pa-en-uke-1.18017824",
-      "category": "NRK Nyheter",
-      "pubDate": "Tue, 08 Sep 2026 10:56:22 GMT"
-    },
-    {
-      "title": "Svensk sikkerhetspoliti bistår under kong Haralds gravferd",
-      "link": "https://www.nrk.no/nyheter/svensk-sikkerhetspoliti-bistar-under-kong-haralds-gravferd-1.18017720",
-      "category": "Kongefamilien",
-      "pubDate": "Tue, 08 Sep 2026 10:33:24 GMT"
-    },
-    {
-      "title": "Politiet har pågrepet 48-åring som mistenkes for strømsabotasje i Tyskland",
-      "link": "https://www.nrk.no/nyheter/politiet-har-pagrepet-48-aring-som-mistenkes-for-stromsabotasje-i-tyskland-1.18017822",
-      "category": "Tyskland",
-      "pubDate": "Tue, 08 Sep 2026 10:31:19 GMT"
-    },
-    {
-      "title": "Kong Haralds gravferd skal vises på storskjerm i over 140 kirker",
-      "link": "https://www.nrk.no/nyheter/kong-haralds-gravferd-skal-vises-pa-storskjerm-i-over-140-kirker-1.18017788",
-      "category": "Kongefamilien",
-      "pubDate": "Tue, 08 Sep 2026 10:29:45 GMT"
+      "title": "Trafikkproblemer ved britiske flyplasser",
+      "link": "https://www.nrk.no/nyheter/trafikkproblemer-ved-britiske-flyplasser-1.18018198",
+      "category": "Storbritannia",
+      "pubDate": "Tue, 08 Sep 2026 14:37:13 GMT"
     }
   ]
 }
