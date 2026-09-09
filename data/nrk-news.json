@@ -1,42 +1,42 @@
 {
-  "updatedAt": "2026-09-09T00:27:14.411Z",
+  "updatedAt": "2026-09-09T05:04:05.354Z",
   "source": "https://www.nrk.no/nyheter/siste.rss",
   "items": [
     {
-      "title": "USAs representant klar til kong Haralds gravferd",
-      "link": "https://www.nrk.no/nyheter/usas-representant-klar-til-kong-haralds-gravferd-1.18018573",
+      "title": "En person er død i brannen i Vennesla",
+      "link": "https://www.nrk.no/nyheter/en-person-er-dod-i-brannen-i-vennesla-1.18018654",
+      "category": "NRK Nyheter",
+      "pubDate": "Wed, 09 Sep 2026 04:40:55 GMT"
+    },
+    {
+      "title": "Meldinger om drepte og sårede i droneangrep ved ukrainsk grensepost",
+      "link": "https://www.nrk.no/nyheter/meldinger-om-drepte-og-sarede-i-droneangrep-ved-ukrainsk-grensepost-1.18018648",
+      "category": "Krigen i Ukraina",
+      "pubDate": "Wed, 09 Sep 2026 04:30:45 GMT"
+    },
+    {
+      "title": "Enighet i lønnsoppgjøret for spesialisthelsetjenesten",
+      "link": "https://www.nrk.no/nyheter/enighet-i-lonnsoppgjoret-for-spesialisthelsetjenesten-1.18018643",
+      "category": "Lønnsoppgjøret 2026",
+      "pubDate": "Wed, 09 Sep 2026 04:17:37 GMT"
+    },
+    {
+      "title": "Oslo sentrum sperret av",
+      "link": "https://www.nrk.no/nyheter/oslo-sentrum-sperret-av-1.18018582",
       "category": "Kongefamilien",
-      "pubDate": "Wed, 09 Sep 2026 00:26:24 GMT"
+      "pubDate": "Wed, 09 Sep 2026 03:56:16 GMT"
     },
     {
-      "title": "Kvinne skadet under ran i Tønsberg",
-      "link": "https://www.nrk.no/nyheter/kvinne-skadet-under-ran-i-tonsberg--1.18018571",
-      "category": "Nyhetssenter Vestfold og Telemark",
-      "pubDate": "Tue, 08 Sep 2026 23:36:16 GMT"
-    },
-    {
-      "title": "Bilbrann på Romerike – Mulig påsatt",
-      "link": "https://www.nrk.no/nyheter/bilbrann-pa-romerike-_-mulig-pasatt-1.18018565",
+      "title": "Store trafikkutfordringer i Oslo: – La bilen stå",
+      "link": "https://www.nrk.no/stor-oslo/store-trafikkutfordringer-i-oslo_-_-la-bilen-sta-1.18018606",
       "category": "Nyhetssenter Stor-Oslo",
-      "pubDate": "Tue, 08 Sep 2026 23:32:20 GMT"
+      "pubDate": "Wed, 09 Sep 2026 03:33:25 GMT"
     },
     {
-      "title": "Vil ramme flyprodusenten Bombardier",
-      "link": "https://www.nrk.no/nyheter/vil-ramme-flyprodusenten-bombardier-1.18018569",
-      "category": "USA",
-      "pubDate": "Tue, 08 Sep 2026 23:20:26 GMT"
-    },
-    {
-      "title": "USA forbyr import av flere varer fra Canada",
-      "link": "https://www.nrk.no/nyheter/usa-forbyr-import-av-flere-varer-fra-canada-1.18018568",
-      "category": "USA",
-      "pubDate": "Tue, 08 Sep 2026 23:18:05 GMT"
-    },
-    {
-      "title": "Flere kongelige gjester har ankommet Oslo i natt",
-      "link": "https://www.nrk.no/nyheter/flere-kongelige-gjester-har-ankommet-oslo-i-natt-1.18018564",
-      "category": "Kongefamilien",
-      "pubDate": "Tue, 08 Sep 2026 22:56:45 GMT"
+      "title": "Gravferden til kong Harald vises på storskjerm i over 160 kirker",
+      "link": "https://www.nrk.no/nyheter/gravferden-til-kong-harald-vises-pa-storskjerm-i-over-160-kirker-1.18018581",
+      "category": "Gravferd",
+      "pubDate": "Wed, 09 Sep 2026 03:04:04 GMT"
     }
   ]
 }
