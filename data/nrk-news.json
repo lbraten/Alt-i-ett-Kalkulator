@@ -1,7 +1,19 @@
 {
-  "updatedAt": "2026-09-09T21:04:55.935Z",
+  "updatedAt": "2026-09-09T23:26:29.250Z",
   "source": "https://www.nrk.no/nyheter/siste.rss",
   "items": [
+    {
+      "title": "WSJ: Trump advart om at Iran-konflikten kan vare ut presidentperioden",
+      "link": "https://www.nrk.no/nyheter/wsj_-trump-advart-om-at-iran-konflikten-kan-vare-ut-presidentperioden-1.18019978",
+      "category": "USA",
+      "pubDate": "Wed, 09 Sep 2026 23:20:06 GMT"
+    },
+    {
+      "title": "To personer drept i russisk angrep mot kjøpesenter i Sumy",
+      "link": "https://www.nrk.no/nyheter/to-personer-drept-i-russisk-angrep-mot-kjopesenter-i-sumy-1.18019964",
+      "category": "Krigen i Ukraina",
+      "pubDate": "Wed, 09 Sep 2026 22:45:42 GMT"
+    },
     {
       "title": "Moldovske myndigheter: Zelenskyjs fly til Oslo forsinket av dronetrussel",
       "link": "https://www.nrk.no/nyheter/-moldovske-myndigheter_-zelenskyjs-fly-til-oslo-forsinket-av-dronetrussel-1.18019950",
@@ -25,18 +37,6 @@
       "link": "https://www.nrk.no/nyheter/frp-vil-hasteinnkalle-stortinget-for-a-kutte-drivstoffavgiftene-1.18019880",
       "category": "Fremskrittspartiet",
       "pubDate": "Wed, 09 Sep 2026 19:19:18 GMT"
-    },
-    {
-      "title": "Spansk etterretning advarte om Ceuta-storming",
-      "link": "https://www.nrk.no/nyheter/spansk-etterretning-advarte-om-ceuta-storming-1.18019867",
-      "category": "Spania",
-      "pubDate": "Wed, 09 Sep 2026 18:39:19 GMT"
-    },
-    {
-      "title": "Sørlandssenteret evakueres etter røykutvikling",
-      "link": "https://www.nrk.no/sorlandet/sorlandssenteret-evakueres-etter-roykutvikling-1.18019805",
-      "category": "Nyheter fra Agder",
-      "pubDate": "Wed, 09 Sep 2026 18:39:11 GMT"
     }
   ]
 }
