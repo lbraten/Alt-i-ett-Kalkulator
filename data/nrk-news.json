@@ -1,7 +1,25 @@
 {
-  "updatedAt": "2026-09-09T23:26:29.250Z",
+  "updatedAt": "2026-09-10T01:21:04.593Z",
   "source": "https://www.nrk.no/nyheter/siste.rss",
   "items": [
+    {
+      "title": "Tre drept i amerikansk angrep mot «narkobåt» i Karibia",
+      "link": "https://www.nrk.no/nyheter/tre-drept-i-amerikansk-angrep-mot-_narkobat_-i-karibia-1.18019981",
+      "category": "USA",
+      "pubDate": "Thu, 10 Sep 2026 01:18:30 GMT"
+    },
+    {
+      "title": "Nødsklie utløst ved et uhell på Air Force One",
+      "link": "https://www.nrk.no/nyheter/nodsklie-utlost-ved-et-uhell-pa-air-force-one-1.18019976",
+      "category": "USA",
+      "pubDate": "Thu, 10 Sep 2026 00:26:51 GMT"
+    },
+    {
+      "title": "Minst fem døde i fergebrann på Filippinene",
+      "link": "https://www.nrk.no/nyheter/minst-fem-dode-i-fergebrann-pa-filippinene-1.18019979",
+      "category": "Filippinene",
+      "pubDate": "Wed, 09 Sep 2026 23:35:31 GMT"
+    },
     {
       "title": "WSJ: Trump advart om at Iran-konflikten kan vare ut presidentperioden",
       "link": "https://www.nrk.no/nyheter/wsj_-trump-advart-om-at-iran-konflikten-kan-vare-ut-presidentperioden-1.18019978",
@@ -19,24 +37,6 @@
       "link": "https://www.nrk.no/nyheter/-moldovske-myndigheter_-zelenskyjs-fly-til-oslo-forsinket-av-dronetrussel-1.18019950",
       "category": "Krigen i Ukraina",
       "pubDate": "Wed, 09 Sep 2026 20:43:44 GMT"
-    },
-    {
-      "title": "200 prosent økning i datatrafikken under Kong Haralds gravferd",
-      "link": "https://www.nrk.no/nyheter/200-prosent-okning-i-datatrafikken-under-kong-haralds-gravferd---1.18019927",
-      "category": "Kongefamilien",
-      "pubDate": "Wed, 09 Sep 2026 19:57:45 GMT"
-    },
-    {
-      "title": "Netanyahu saksøker Haaretz for ærekrenkelse",
-      "link": "https://www.nrk.no/nyheter/netanyahu-saksoker-haaretz-for-aerekrenkelse-1.18019916",
-      "category": "Israel",
-      "pubDate": "Wed, 09 Sep 2026 19:30:32 GMT"
-    },
-    {
-      "title": "Frp vil hasteinnkalle Stortinget for å kutte drivstoffavgiftene",
-      "link": "https://www.nrk.no/nyheter/frp-vil-hasteinnkalle-stortinget-for-a-kutte-drivstoffavgiftene-1.18019880",
-      "category": "Fremskrittspartiet",
-      "pubDate": "Wed, 09 Sep 2026 19:19:18 GMT"
     }
   ]
 }
